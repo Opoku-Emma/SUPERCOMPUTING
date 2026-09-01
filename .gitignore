@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Not needed
+Supercomputing_for_Science_Syllabus_grad.md
