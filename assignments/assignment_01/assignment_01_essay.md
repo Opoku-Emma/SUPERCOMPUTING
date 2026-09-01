@@ -7,12 +7,3 @@ cd assignments
 cd assignments_01
 touch assignment_01_essay.md
 
-touch config/config.txt
-
-touch data/{raw/sample_01.csv,clean/sample_01_cleaned.csv}
-
-touch scripts/01_script.sh results/sample_01_results.csv
-
-touch docs/documentation.txt log/logfile.log
-
-
