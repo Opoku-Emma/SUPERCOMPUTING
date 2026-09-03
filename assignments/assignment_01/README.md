@@ -1,12 +1,24 @@
+# Code for creating folder structure
+
+## move to repo directory after pulling from github
+
 cd SUPERCOMPUTING/
+
+## construct folder structure for assignment using brace expansion makes it easier
 
 mkdir assignments/assignment_01/{data,scripts,results,docs,config,log}
 
+## add subfolder for raw and clean data and create an empty essay.md file
+
 mkdir assignments/assignment_01/data/{raw,clean}
+
 cd assignments
+
 cd assignments_01
+
 touch assignment_01_essay.md
 
+## add placeholder files. this will make it possible to push to github since empty folders are ignored
 touch config/config.txt
 
 touch data/{raw/sample_01.csv,clean/sample_01_cleaned.csv}
