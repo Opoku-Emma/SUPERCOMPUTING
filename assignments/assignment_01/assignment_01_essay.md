@@ -12,9 +12,7 @@ My main approach to learning is repeatedly practicing what I am taught. Taking a
 [why the folder structure you created is good for reproducible research]
 My folder structure is good enough for reproducible research because it groups project files based on their use case. Recalling from the readings accompanying this assignment, it is always worthwhile to stay organized especially when sharing code and occasionally building tools that will be used by other people.
 
-
 [your understanding of why we use documented code to do computational research tasks]
 Documenting code is useful for three purposes; revisiting code in the future, code sharing, and results validation by independent researchers. Writing code in the present mostly appears comprehensible until it is revisited after a while. Without any documentation it becomes challenging to understand what the code was intended to do or even to debug. Moreso, code is usually not used by one person. Regularly, it has to either be deposited for public use or shared with others to replicate whatever findings were initially observed. Whichever the case, it is helpful to have descriptive phrases or sentences that explicitly inform the reader about the original intent of the code. This reinforces the idea of writing code for humans and, tangential to this, writing data for computers.
 
 [anything else you want me to know about you, your background, or what/why you hope to learn]
-
