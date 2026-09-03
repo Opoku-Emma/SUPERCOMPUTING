@@ -1,8 +1,9 @@
 # Code for creating folder structure
 
-## move to repo directory after pulling from github
-
-cd SUPERCOMPUTING/
+## I am assuming we are currently inside `SUPERCOMPUTING` directory
+## and `assignments` folder already exists as it was made in class
+## so, make  assignment_01 subdirectory
+mkdir assignments/assignment_01
 
 ## construct folder structure for assignment using brace expansion makes it easier
 
@@ -14,7 +15,7 @@ mkdir assignments/assignment_01/data/{raw,clean}
 
 cd assignments
 
-cd assignments_01
+cd assignment_01
 
 touch assignment_01_essay.md
 
