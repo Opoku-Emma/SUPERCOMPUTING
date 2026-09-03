@@ -7,7 +7,7 @@ mkdir assignments/assignment_01
 
 ## construct folder structure for assignment using brace expansion makes it easier
 
-mkdir assignments/assignment_01/{data,scripts,results,docs,config,log}
+mkdir assignments/assignment_01/{data,scripts,results,docs,config,logs}
 
 ## add subfolder for raw and clean data and create an empty essay.md file
 
@@ -26,6 +26,6 @@ touch data/{raw/sample_01.csv,clean/sample_01_cleaned.csv}
 
 touch scripts/01_script.sh results/sample_01_results.csv
 
-touch docs/documentation.txt log/logfile.log
+touch docs/documentation.txt logs/logfile.log
 
 
