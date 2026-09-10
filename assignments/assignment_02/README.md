@@ -6,12 +6,17 @@ Date: September 09, 2026
 
 Assignment: 02
 
+
+## Task 1
+
 Make a couple of folders for project setup inside the 
 `SUPERCOMPUTING/assignments/assignment_02` github folder on the HPC
 
 ```bash
 mkdir ./{data,results,logs,scripts}
 ```
+
+## Task 2
 
 I ran this in my local computer home directory. For reasons unknown,
 I was getting write permission denied error when I attempted
@@ -34,7 +39,9 @@ get GCF_000005845.2_ASM584v2_genomic.fna.gz
 get GCF_000005845.2_ASM584v2_genomic.gff.gz
 ```
 
-I still wasn't able to figure out the globalprotect setup so I used the cli method
+## Task 3
+
+I still wasn't able to figure out the globalprotect setup so I used the cli method. I have configured my terminal in a way that allows me to access the hpc off-campus. It uses the bastion host as a 'proxy jump'
 
 ```bash
 sftp bora-offcampus
@@ -101,3 +108,4 @@ source ~/.bashrc
 
 `alias ll`: List all items in the currrent directory in long form with directories appearing first
 
+## Reflection
