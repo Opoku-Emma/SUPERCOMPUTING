@@ -1,7 +1,9 @@
 # Assignment 02
 
 Name: Emmanuel Opoku
+
 Date: September 09, 2026
+
 Assignment: 02
 
 Make a couple of folders for project setup inside the 
