@@ -6,11 +6,11 @@ Date: September 09, 2026
 
 Assignment: 02
 
-
 ## Task 1
 
-Make a couple of folders for project setup inside the 
-`SUPERCOMPUTING/assignments/assignment_02` github folder on the HPC
+Make a couple of folders for a usual project setup inside the
+`SUPERCOMPUTING/assignments/assignment_02` github folder on the HPC 
+account.
 
 ```bash
 mkdir ./{data,results,logs,scripts}
@@ -18,11 +18,13 @@ mkdir ./{data,results,logs,scripts}
 
 ## Task 2
 
-I ran this in my local computer home directory. For reasons unknown,
+I ran this in my local computer home directory.
+
+For reasons unknown,
 I was getting write permission denied error when I attempted
 to download the files into my `assignment_02` or `SUPERCOMPUTING`
-folder. So instead, I changed directory to my home directory and
-ran the following code.
+folder (which is stored in `Git Repos` folder on my Desktop).
+So instead, I changed directory to my home directory and ran the following code.
 
 ```bash
 cd ~
@@ -41,7 +43,7 @@ get GCF_000005845.2_ASM584v2_genomic.gff.gz
 
 ## Task 3
 
-I still wasn't able to figure out the globalprotect setup so I used the cli method. I have configured my terminal in a way that allows me to access the hpc off-campus. It uses the bastion host as a 'proxy jump'
+I still wasn't able to figure out the globalprotect setup so I used sftp method to transfer the files. I have configured my terminal in a way that allows me to access the hpc off-campus. It uses the bastion host as a 'proxy jump'. So, on my local computer, I ran the code below in my home directory.
 
 ```bash
 sftp bora-offcampus
@@ -60,10 +62,11 @@ cd ~/SUPERCOMPUTING/assignments/assignment_02/data
 
 ll # check for file permissions on the data uploaded
 
-chmod g+r GCF* # make files readab
+chmod g+r GCF* # make files readable for group members
 ```
 
 ## Task 4 
+
 On my local machine, I ran this code
 
 ```bash
@@ -71,19 +74,19 @@ cd ~
 md5sum GCF*
 ```
 
-```
+```plain
 emmanuel@emmanuel:~$ md5sum GCF*
 c13d459b5caa702ff7e1f26fe44b8ad7  GCF_000005845.2_ASM584v2_genomic.fna.gz
 0f52ffc94af5ddf544ff89cc6f546b0c  GCF_000005845.2_ASM584v2_genomic.gff.gz
 ```
 
-
 On the HPC
+
 ```bash
 md5sum GCF*
 ```
 
-```
+```plain
 c13d459b5caa702ff7e1f26fe44b8ad7  GCF_000005845.2_ASM584v2_genomic.fna.gz
 0f52ffc94af5ddf544ff89cc6f546b0c  GCF_000005845.2_ASM584v2_genomic.gff.gz
 ```
@@ -109,3 +112,6 @@ source ~/.bashrc
 `alias ll`: List all items in the currrent directory in long form with directories appearing first
 
 ## Reflection
+
+The most challenging part here was running the `get` command in `ftp`. I searched online but wasn't getting any useful information, most of which were saying ftp is phased out because of security issues.
+However, when I later switched to a directory other than my github repo for this class, it surprisingly worked. Apart from that, every other things worked fine without any hassles.
