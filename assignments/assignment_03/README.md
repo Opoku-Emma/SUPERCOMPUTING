@@ -1,7 +1,8 @@
 # Assignment 3
-Name: Emmanuel Opoku
-Date: September 17, 2026
 
+Name: Emmanuel Opoku
+
+Date: September 17, 2026
 
 ## Task 1
 
@@ -65,11 +66,16 @@ paste headers tmp_sequences.fna > tab_separated_genome.csv
 ## Task 5
 
 Clean up
+
 ```bash
 rm *.fna *.csv headers
 wget https://gzahn.github.io/data/GCF_000001735.4_TAIR10.1_genomic.fna.gz 
 ```
+
 Your approach and what you learned
+
 Any command-line tools that surprised or frustrated you
+
 Why these kinds of skills are essential in computational work
+
 (Optional) How your solution could be automated in the future
