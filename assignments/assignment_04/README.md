@@ -31,6 +31,8 @@ chmod +x install_gh.sh
 
 ./install_gh.sh
 
+cp ./install_gh.sh ~/SUPERCOMPUTING/assignments/assignment_04/scripts/.
+
 ```
 
 ## Task 4. Add the location of the gh binary to your $PATH
@@ -84,6 +86,8 @@ chmod +x install_seqtk.sh
 ./install_seqtk.sh
 
 source ~/.bashrc
+
+cp install_seqtk.sh ~/SUPERCOMPUTING/assignments/assignment_04/scripts/.
 ```
 
 ## Task 7. Figure out seqtk
@@ -180,3 +184,14 @@ done
 ```
 
 ## Task 10: Document Everything in README.md
+
+
+## Task 11 Push to Github
+
+```bash
+
+git add ~/SUPERCOMPUTING/assignments/assignment_04/
+
+git commit -m "Almost done here"
+
+git push```
