@@ -119,7 +119,7 @@ SUMMARY_TBL=$(seqtk comp $FASTA_FILE | cut -f 1,3)
 echo "Total sequences in $FASTA_FILE: $NUM_SEQS"
 echo "Total bases in $FASTA_FILE: $NUM_BASES"
 echo -e "\nSequence names and lengths\n"
-echo $SUMMARY_TBL
+echo "$SUMMARY_TBL"
 
 ```
 
