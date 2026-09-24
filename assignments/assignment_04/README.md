@@ -187,6 +187,8 @@ done
 
 The most challenging part was pushing to github after installing `gh` and authenticating. I was running into issues because a different version of `gh` was installed and conflicts came up when I had to use git to push to the SUPERCOMPUTING repository.
 
+`$PATH` stores a list of all the places a command will look before running the command
+
 ## Task 11 Push to Github
 
 ```bash
