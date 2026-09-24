@@ -139,7 +139,7 @@ chmod +x summarize_fasta.sh
 ## Task 9. Run `summarize_fasta.sh` in a loop on multiple files.
 
 ```bash
-mkdir data
+mkdir -p data
 cd data 
 
 # download E. coli genome
@@ -164,7 +164,7 @@ rm -fr e_coli s_cerevisiae m_tuberculosis
 cd ../
 
 # make scripts directory
-mkdir scripts
+mkdir -p scripts
 
 mv summarize_fasta.sh scripts/.
 
