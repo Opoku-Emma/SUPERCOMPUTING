@@ -39,7 +39,7 @@ chmod +x install_gh.sh
 # gh binaries path
 realpath gh_2.74.2_linux_amd64/
 
-echo 'export PATH=$PATH:/sciclone/home/eopoku/programs/gh_2.74.2_linux_amd64/bin/' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/programs/gh_2.74.2_linux_amd64/bin/' >> ~/.bashrc
 
 source ~/.bashrc
 ```
@@ -66,7 +66,7 @@ cd seqtk
 
 make
 
-echo 'export PATH=$PATH:/sciclone/home/eopoku/programs/seqtk/' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/programs/seqtk/' >> ~/.bashrc
 ```
 
 this was done in `~/programs`
