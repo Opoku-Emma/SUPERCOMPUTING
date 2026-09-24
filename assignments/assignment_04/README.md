@@ -1,4 +1,4 @@
-
+# Assignment 04
 
 ## Task 2: Download and unpack the gh "tarball" file
 
@@ -70,6 +70,7 @@ echo 'export PATH=$PATH:$HOME/programs/seqtk/' >> ~/.bashrc
 ```
 
 this was done in `~/programs`
+
 ```bash
 nano install_seqtk.sh
 # pasted the code block above
@@ -138,7 +139,7 @@ chmod +x summarize_fasta.sh
 ./summarize_fasta.sh ../assignment_03/data/GCF_000001735.4_TAIR10.1_genomic.fna.gz
 ```
 
-## Task 9. Run `summarize_fasta.sh` in a loop on multiple files.
+## Task 9. Run `summarize_fasta.sh` in a loop on multiple files
 
 ```bash
 mkdir -p data
