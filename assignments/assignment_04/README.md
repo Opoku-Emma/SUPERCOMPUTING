@@ -185,6 +185,7 @@ done
 
 ## Task 10: Document Everything in README.md
 
+The most challenging part was pushing to github after installing `gh` and authenticating. I was running into issues because a different version of `gh` was installed and conflicts came up when I had to use git to push to the SUPERCOMPUTING repository.
 
 ## Task 11 Push to Github
 
