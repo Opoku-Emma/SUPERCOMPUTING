@@ -100,5 +100,8 @@ fastp --in1 $FWD_IN --in2 $REV_IN --out1 $FWD_OUT --out2 $REV_OUT \
 
 ```bash
 rm data/raw/*.fastq.gz
+
+# make sure data folder structure is pushed
+touch data/{raw/placeholder,trimmed/placeholder}
 ./pipeline.sh
 ```
