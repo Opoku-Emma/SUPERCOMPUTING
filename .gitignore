@@ -219,3 +219,9 @@ __marimo__/
 
 # Not needed
 Supercomputing_for_Science_Syllabus_grad.md
+
+# don't push fastq files
+*.fastq.gz
+*.fastq
+*.html
+*.out
