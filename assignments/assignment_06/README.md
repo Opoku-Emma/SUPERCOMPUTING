@@ -205,4 +205,14 @@ To run the pipeline, first make sure you are in the root directory. Then run
 bash pipeline.sh
 ```
 
-### Challenges
+### Reflection
+
+Up until now, I had not given much attention to reading the manual of wget to know what's in there. So I did that to figure out how to download content into a specific folder with a filename. That helped as I would rather have had to rename the fastq file after downloading and then moved it to the data directory.
+
+Even though I didn't use the `find` command in the assignment, I initially wanted to since I found it to useful when we were required to keep only the fasta and log files after assembly.
+
+One of the things that have tripped me up most of the time is writing loops. I sometimes make the mistake of including a semicolon after `for var in iterable` because this is how it's done in Python.
+
+If the program is readily available as a module, I will gladly go for it. However, thinking of reproducibility, I will rather choose either a conda environment or a local build. This ensures that anyone can run my pipeline and get the same results as I did.
+
+I will first do a conda environment install before looking for a module version of it for the next assignment
