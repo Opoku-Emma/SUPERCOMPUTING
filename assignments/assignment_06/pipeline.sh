@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+mkdir -p data scripts assemblies/{assembly_conda,assembly_local,assembly_module}
+
 echo "## --- Downloading Data --- ##"
 bash scripts/01_download_data.sh
 

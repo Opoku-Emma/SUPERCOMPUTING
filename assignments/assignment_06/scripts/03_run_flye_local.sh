@@ -3,9 +3,9 @@
 set -ueo pipefail
 
 # I have already added the local build of flye to $PATH
-export PATH=\$PATH:${FLYE_PATH} >> ~/.bashrc
+export PATH=${PATH}:${HOME}/programs/Flye/bin/
 # run assembly
-flye --nano-hq data/SRR33939694.fastq.gz --out-dir ./assemblies/assembly_local/ --threads 20 
+flye --nano-hq data/SRR33939694.fastq.gz --out-dir ./assemblies/assembly_local/ --threads 6 
 
 cd ./assemblies/assembly_local/
 

@@ -10,7 +10,7 @@ source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate flye-env
 
 # run assembly
-flye --nano-hq data/SRR33939694.fastq.gz --out-dir ./assemblies/assembly_conda/ --threads 20 
+flye --nano-hq data/SRR33939694.fastq.gz --out-dir ./assemblies/assembly_conda/ --threads 6 
 
 cd ./assemblies/assembly_conda/
 

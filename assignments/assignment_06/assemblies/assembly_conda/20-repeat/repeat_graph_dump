@@ -1,0 +1,8 @@
+Edge	0	7	5	1	0	0	10	-1
+	Sequence	+edge_1_0_+disjointig_1_0_47388 47388 1 47389 0 47388
+Edge	1	4	3	1	0	0	10	-1
+	Sequence	-edge_1_0_+disjointig_1_0_47388 47388 -1 47389 0 47388
+Edge	2	2	6	1	0	0	100	-1
+	Sequence	+edge_2_0_+disjointig_2_0_44285 44285 2 44286 0 44285
+Edge	3	1	0	1	0	0	100	-1
+	Sequence	-edge_2_0_+disjointig_2_0_44285 44285 -2 44286 0 44285
