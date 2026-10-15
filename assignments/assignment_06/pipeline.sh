@@ -22,7 +22,7 @@ bash scripts/03_run_flye_local.sh
 echo
 
 echo "## --- Assembling with flye module version --- ##"
-# bash scripts/03_run_flye_module.sh
+bash scripts/03_run_flye_module.sh
 echo
 
 echo "## --- checking if all match --- ##"
