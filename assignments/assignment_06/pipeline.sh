@@ -1,4 +1,12 @@
 #!/bin/bash
+#SBATCH --job-name=pipeline
+#SBATCH --nodes=1 # how many physical machines in the cluster
+#SBATCH --ntasks=1 # how many separate 'tasks' (stick to 1)
+#SBATCH --cpus-per-task=1 # how many cores (bora max is 20)
+#SBATCH --time=120 # d-hh:mm:ss or just No. of minutes
+#SBATCH --mem=1 # how much physical memory (all by default)
+#SBATCH -o pipeline_%j.out #STDOUT to file (%j is jobID)
+#SBATCH -e pipeline_%j.err #STDERR to file (%j is jobID)
 
 set -euo pipefail
 
