@@ -4,11 +4,11 @@
 
 ```bash
 # just make sure I am in the right directory
-cd ~/SUPERCOMPUTING/assignments/assignment_07/
+cd /sciclone/scr10/eopoku/SUPERCOMPUTING/assignments/assignment_07/
 
 touch assignment_7_pipeline.slurm
 
-mkdir -p data/{raw,clean,dog_reference} output scripts
+mkdir -p data/{raw,clean,dog_reference} output scripts logs
 ```
 
 ## Task 2. Download Sequence Data
@@ -24,7 +24,6 @@ Write a script that loops through the first column ("Run") and uses `fasterq-dum
 
 I am hitting download errors because my home directory storage quota is being used up. I will switch to data10 or scr10
 ```bash
-touch scripts/01_download_data.sh
 # !/bin/bash
 set -euo pipefail
 # set up environment
@@ -54,4 +53,4 @@ datasets download genome taxon 9615 \
 unzip -o ./data/dog_reference/dog_genome.zip -d ./data/dog_reference/
 
 
-```
+```touch scripts/01_download_data.sh
