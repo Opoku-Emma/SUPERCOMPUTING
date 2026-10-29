@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/SUPERCOMPUTING/assignments/assignment_07/
+cd ~/scr10/SUPERCOMPUTING/assignments/assignment_07/
 
 mkdir -p data/{raw,clean,dog_reference} output scripts logs
 
@@ -16,18 +16,19 @@ module load miniforge3
 # JOB_03=`sbatch --dependency=afterany:$JOB_02 jobscript3.sbatch |cut -f 4 -d " "`
 
 ## download data
-JOB_01=$(sbatch ./scripts/01_download_data.sh | cut -f 4 -d " ")
+JOB_01=$(sbatch scripts/01_download_data.sh | cut -f 4 -d " ")
+echo "Download job: ${JOB_01}"
 
 # Task 3
 # set up fastp environment
 # mamba create -y -n fastp-env -c bioconda fastp
 ## --- clean reads --- ####
-JOB_02=$(sbatch --dependency=afterok:$JOB_01 ./scripts/02_clean_reads.sh | cut -f 4 -d " ")
+JOB_02=$(sbatch --dependency=afterok:$JOB_01 scripts/02_clean_reads.sh | cut -f 4 -d " ")
+echo "Clean job: ${JOB_02}"
 
-echo "## --- Processing Done --- ##"
 
 # Install bbmap for this step
 # mamba create -y -n bbmap-env -c bioconda bbmap
 
 ## --- Map reads and count them
-JOB_03=$(sbatch --dependenvy=afterok:$JOB_02 ./scripts/03_map_reads.sh  | cut -f 4 -d " ")
+JOB_03=$(sbatch --dependency=afterok:$JOB_02 scripts/03_map_reads.sh | cut -f 4 -d " ")

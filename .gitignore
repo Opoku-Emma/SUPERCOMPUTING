@@ -223,7 +223,9 @@ Supercomputing_for_Science_Syllabus_grad.md
 # don't push fastq files
 *.fastq.gz
 *.fastq
+*.fna
 *.html
+*.err
 *.out
 data/*/*
 assignments/assignment_07/data/{clean,raw}/*.fastq

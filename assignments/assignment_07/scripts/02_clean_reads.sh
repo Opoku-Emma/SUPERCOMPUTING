@@ -50,3 +50,5 @@ for R1 in $(ls ${RAW_DIR}/*_1.fastq); do
 done
 
 
+conda deactivate fastp-env
+

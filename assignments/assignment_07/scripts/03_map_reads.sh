@@ -69,4 +69,5 @@ for FWD_IN in $(ls ${CLEAN_DIR}/*_1.trimmed.fastq); do
 
 done
 
+conda deactivate bbmap-env
 echo "Done done!!"
