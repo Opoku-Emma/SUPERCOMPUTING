@@ -3,15 +3,16 @@
 #SBATCH --partition=gz
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=10
-#SBATCH --time=04:00:00
+#SBATCH --cpus-per-task=5
+#SBATCH --time=02:00:00
 #SBATCH -o logs/download_%j.out
 #SBATCH -e logs/download_%j.err
 
 set -euo pipefail
 
 # set up environment
-module load miniforge3
+module load miniforge3/
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate sra-env
 
 METADATA="./data/SraRunTable.csv"
@@ -36,3 +37,7 @@ datasets download genome taxon 9615 \
 
 unzip -o ./data/dog_reference/dog_genome.zip -d ./data/dog_reference/
 
+# clean up
+find "./data/dog_reference/." -name "*.fna" | xargs -I {} mv {} ./data/dog_reference_genome.fna
+rm -fr data/dog_reference/*
+mv ./data/dog_reference_genome.fna ./data/dog_reference/.

@@ -226,3 +226,4 @@ Supercomputing_for_Science_Syllabus_grad.md
 *.html
 *.out
 data/*/*
+assignments/assignment_07/data/{clean,raw}/*.fastq
