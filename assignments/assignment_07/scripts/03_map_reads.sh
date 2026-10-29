@@ -6,8 +6,8 @@
 #SBATCH --cpus-per-task=30
 #SBATCH --mem=64G
 #SBATCH --time=24:00:00
-#SBATCH -o logs/map_reads_%j.out
-#SBATCH -e logs/map_reads_%j.err
+#SBATCH -o logs/assignment_7.out
+#SBATCH -e logs/assignment_7.err
 
 set -ueo pipefail
 
@@ -70,4 +70,6 @@ for FWD_IN in $(ls ${CLEAN_DIR}/*_1.trimmed.fastq); do
 done
 
 conda deactivate bbmap-env
+
+rm -fr data/ref
 echo "Done done!!"

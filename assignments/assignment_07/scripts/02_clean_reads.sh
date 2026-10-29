@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=20
 #SBATCH --time=04:00:00
-#SBATCH -o logs/clean_reads_%j.out
-#SBATCH -e logs/clean_reads_%j.err
+#SBATCH -o logs/assignment_7.out
+#SBATCH -e logs/assignment_7.err
 
 set -ueo pipefail
 

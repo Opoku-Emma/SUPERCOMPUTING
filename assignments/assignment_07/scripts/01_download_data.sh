@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=5
 #SBATCH --time=02:00:00
-#SBATCH -o logs/download_%j.out
-#SBATCH -e logs/download_%j.err
+#SBATCH -o logs/assignment_7.out
+#SBATCH -e logs/assignment_7.err
 
 set -euo pipefail
 
