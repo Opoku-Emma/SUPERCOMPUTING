@@ -20,14 +20,14 @@ CLEAN_DIR="data/clean"
 REF_GENOME="data/dog_reference/dog_reference_genome.fna"
 INDEX_REF="data/ref/"
 OUTPUT="output"
-THREADS=${SLURM_CPUS_PER_TASK:-10}
+THREADS=${SLURM_CPUS_PER_TASK}
 JAVA_MEM="-Xmx48g"  
 
 SUMMARY="${OUTPUT}/read_counts.tsv"
 
 mkdir -p ${OUTPUT} logs
 
-# summary table header (tab-separated)
+# summary table header
 echo -e "SampleID\tTotal Reads\tDog-Mapped Reads" > ${SUMMARY}
 
 ## --- Index Reference Genome --- ##
@@ -46,10 +46,9 @@ for FWD_IN in $(ls ${CLEAN_DIR}/*_1.trimmed.fastq); do
     LOG=logs/$(basename ${FWD_IN/_1.trimmed.fastq/.log})
     echo $LOG
 
-    bbmap.sh in=${FWD_IN} in2=${REV_IN} path=${INDEX_REF} out=${OUT}.tmp.sam \
+    bbmap.sh in=${FWD_IN} in2=${REV_IN} path=${INDEX_REF} out=${OUT} \
         minid=0.95 threads=${THREADS} ${JAVA_MEM} \
         > ${LOG} 2>&1
-    mv ${OUT}.tmp.sam ${OUT}
 
     ## --- Extract reads that mapped to the dog genome --- ##
     # -F 4 excludes unmapped reads (flag 4), keeping only mapped reads

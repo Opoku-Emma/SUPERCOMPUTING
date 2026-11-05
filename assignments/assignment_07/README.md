@@ -16,6 +16,7 @@ bash assignment_7_pipeline.slurm
 ```
 Logs are stored in `./logs`.
 The script automatically cleans up non-essential files
+**NB:** The pipeline uses three conda  environments. To create them, please uncomment the `mamba create ` lines of code in `[assignment_7_pipeline.slurm](assignment_7_pipeline.slurm). The will ensure that the necessary environments are available before being called.
 ## Task 1. Setup assignment_7/ directory
 This step sets up the project directory. The subdirectories are needed for the other steps
 ```bash
@@ -31,7 +32,7 @@ The [SraRunTable.csv](./data/SraRunTable.csv) file was created using the keyword
 `(((((metagenome) AND shotgun metagenome) AND paired end) AND illumina)) AND genome`
 Metadata for the first 12 results were downloaded.
 
-The accessions listed in the sra file are downloaded automatically and stored in `data/raw`
+The accessions listed in the sra file are downloaded automatically and stored in `data/raw`. The reference genome for a dog (*Canis familiaris*) is downloaded using the taxon ID `9615`. After download, the `fna` file is renamed to `dog_reference_genome.fna` and stored in `data/`; all other files included in the zipped file are removed.
 
 ## Task 3. Clean up raw reads
 I cleaned each of the downloaded metagenomes using`fastp`. The resulting  cleaned/trimmed files are stored in `data/clean`.
@@ -49,6 +50,22 @@ The mapped reads are extracted using `samtools view -h -F 4 <sample.sam>`. The r
 ## Task 8. Inspect your results
 Finally, I count all dog genome-matched reads and saved the statistics to [read_counts](output/read_counts.tsv).
 
+```plain
+SampleID   	 Total Reads	 Dog-Mapped Reads
+ERR10852677	    16,539,354	                0
+ERR10852762	     9,687,514	                2
+ERR10852766	    11,576,344	                0
+ERR10852767	    11,814,640	                0
+ERR10852769	    12,063,696	                0
+ERR10852771	    10,847,266	                2
+ERR10852775	     2,338,372	                0
+ERR10852783	    14,288,492	                0
+ERR10852794	    14,948,608	                0
+ERR10852798	     9,338,974	                1
+ERR10852800	    15,368,786	                1
+ERR10852801	    18,395,796	                3
+```
+
 ## Reflection
 so instead of having one controller script ([assignment_7_pipeline](./assignment_7_pipeline.slurm)), I made all three scripts that perform different tasks slurm batch scripts. To circumvent the second and third jobs failing since they will need outputs from the previous job, I set a dependency argument.
- Initially, the second and third jobs for cleaning and mapping would have failed since the  runs immediately and the lines in that code are executed instantaneously.
+One other thing was figuring out how to count the mapped reads. But looking through the documentation/manual page helped a lot!
